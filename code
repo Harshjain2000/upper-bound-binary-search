@@ -1,0 +1,18 @@
+long long int upperbinarysearch(vector<long long int>v,long long int l,long long int r,long long int x)
+{
+	long long int m;
+	
+	while(l<=r)
+	{
+		m=l+((r-l)>>1);
+	
+		if(v[m]<x)
+		{
+			l=m+1;
+		}
+		else{
+			r=m-1;
+		}
+	}
+	return l;
+}
